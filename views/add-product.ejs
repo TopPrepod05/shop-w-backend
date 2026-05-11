@@ -1,0 +1,12 @@
+<%- include('components/top') %>
+
+<h2 id="add-h2">Добавление товара</h2>
+
+<form action="/products/add" method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" id="name" placeholder="Введи название:">
+    <input type="number" name="price" id="price" placeholder="Напиши цену товара:">
+    <input type="file" accept=".png, .jpg" name="image">
+    <input type="submit" id="add-prod-btn" value="Добавить товар">
+</form>
+
+<%- include('components/bottom') %>
