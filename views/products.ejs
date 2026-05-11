@@ -3,16 +3,21 @@
 <h2>ПРОДУКТЫ</h2>
 
 <div class="products">
-    <% for(const prod of products) { %>
-        <div class="card">
-            <img src="<%= prod.image %>" alt="<%= prod.name %>" class="card-image">
-            <div class="card-elements">
-                <p class="card-title"><%= prod.name %></p>
-                <p class="card-price"><%= prod.price %> ₽</p>
-                <button class="card-add">+</button>
+    <% if (products.length == 0) { %>
+        <h3>Товаров нет!</h3>
+    <% } else { %>
+        <% for(const prod of products) { %>
+            <div class="card">
+                <img src="<%= prod.image %>" alt="<%= prod.name %>" class="card-image">
+                <div class="card-elements">
+                    <p class="card-title"><%= prod.name %></p>
+                    <p class="card-price"><%= prod.price %> ₽</p>
+                    <button class="card-add">+</button>
+                </div>
             </div>
-        </div>
+        <% } %>
     <% } %>
+     
 
 </div>
 
